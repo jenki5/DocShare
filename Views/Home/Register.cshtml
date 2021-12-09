@@ -1,0 +1,44 @@
+@{
+    ViewData["Title"] = "DocShare Login";
+}
+
+@model User
+
+<section class="login-page-a">
+    <div class="outer-box center">
+        <div class="mid-box center">
+            <div class="login-box">
+                <h1 class="login-title">Register</h1>
+                <span class="error-message">@ViewBag.RegisterError</span>
+                <form asp-controller="Home" asp-action="SubmitRegister" method="POST" class="center">
+                    <input type="hidden" required asp-for="@Model.ActivationCode" class="username input-item" placeholder="First Name">
+                    <input type="text" required asp-for="@Model.FirstName" class="username input-item" placeholder="First Name">
+                    <input type="text" required asp-for="@Model.LastName" class="username input-item" placeholder="Last Name">
+                    <input type="text" required asp-for="@Model.Company.CompanyName" class="username input-item" placeholder="Company Name">
+                    <input type="email" required asp-for="@Model.Email" class="username input-item" placeholder="Email">
+                    <input type="text" required asp-for="@Model.PhoneNumber" class="username input-item" placeholder="Phone Number">
+                    <input type="text" required asp-for="@Model.Company.StreetAddress1" class="username input-item" placeholder="Street Address 1">
+                    <input type="text" asp-for="@Model.Company.StreetAddress2" class="username input-item" placeholder="Street Address 2">
+                    <input type="text" required asp-for="@Model.Company.City" class="username input-item" placeholder="City">
+                    <input type="text" required asp-for="@Model.Company.State" class="username input-item" placeholder="State">
+                    <input type="text" required asp-for="@Model.Company.Zip" class="username input-item" placeholder="Zip">
+                    <select required asp-for="@Model.Company.CompanyTypeID" class="input-item" id="">
+                        @for(int i = 0; i < Model.CompanyTypes.Count(); i++)
+                        {
+                            <option value="@Model.CompanyTypes[i].CompanyTypeID">@Model.CompanyTypes[i].CompanyTypeName</option>
+                        }
+                    </select>
+                    <input type="password" required asp-for="@Model.Password" class="password input-item" placeholder="Password">
+                    <input type="password" required asp-for="@Model.ConfirmPassword" class="password input-item" placeholder="Confirm Password">
+                    <input type="submit" class="btn btn-primary">    
+                </form>
+                <span>Already have an account? Login <a href="/">here</a>.</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    var user = @Html.Raw(Json.Serialize(Model));
+    console.log(user);
+</script>

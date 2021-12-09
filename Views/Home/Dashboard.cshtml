@@ -1,0 +1,207 @@
+@{
+ViewData["Title"] = "DocShare Dashboard";
+}
+
+@model User
+
+<header class="dashboard-header">
+    <div class="h1-div">
+        <h1>Contact</h1>
+    </div>
+    <div class="lab-options-div">
+        <select id="lab-options" class="lab-options">
+            <option value="0">All...</option>
+            @for(int i = 0; i < Model.Company.Friends.Count(); i++)
+            {
+                @if(Model.Company.Friends[i].CompanyID == 3){
+                    <option selected value="@Model.Company.Friends[i].CompanyID">@Model.Company.Friends[i].CompanyName</option>
+                }
+                else{
+                    <option value="@Model.Company.Friends[i].CompanyID">@Model.Company.Friends[i].CompanyName</option>
+                }
+            }
+        </select>
+    </div>
+    <div class="selected-lab">
+        <div class="lab-box">
+            <h2 id="lab-name">@Model.Company.CompanyName<i class="fa fa-user-circle logout-dropdown" aria-hidden="true"></i></h2>
+            <div class="logout-box">
+                <a href="Logout" id="logout-btn">Logout</a>
+            </div>    
+        </div>
+    </div>
+</header>
+<div class="overlay center" id="new-case-modal">
+    <div class="case-creator modal">
+        <div class="header">
+            <h2>New Case</h2>
+            <span class="close-x" id="case-creator-close-x">&#215;</span>
+        </div>
+        <div class="add-new-supplier-div">
+            <a class="add-new-supplier-btn">Add New Supplier</a>
+        </div>
+        <div class="data-points" id="new-cases-data-points"></div>
+        <button class="" id="submit-new-cases">Save New Cases</button>
+    </div>
+</div>
+<div class="overlay center" id="confirm-delete-case-modal">
+    <div class="modal confirm-case-delete">
+        <div class="header">
+            <h2>Confirm Delete</h2>
+            <span class="close-x" id="case-creator-close-x">&#215;</span>
+        </div>
+        <div class="body">
+            <p>Are you sure you would like to delete the case <b id="confirm-delete-case-name"></b>?</p>
+            <div class="buttons">
+                <button class="confirm-delete-btn" id="confirm-delete-btn">Confirm</button>
+                <button class="close-x">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="overlay center" id="confirm-hold-case-modal">
+    <div class="modal confirm-case-hold">
+        <div class="header">
+            <h2 id="hold-header">Confirm Hold</h2>
+            <span class="close-x" id="case-creator-close-x">&#215;</span>
+        </div>
+        <div class="body">
+            <p>Are you sure you would like <span id="hold-explanation">place a hold</span> on the case <b id="confirm-hold-case-name"></b>?</p>
+            <p>Please leave a note explanation.</p>
+            <div class="new-note">
+                <h4>@Model.FirstName @Model.LastName</h4>
+                <div class="note-area">
+                    <i class="fa fa-user-md" aria-hidden="true"></i>
+                    <textarea id="new-hold-note"></textarea>
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="confirm-hold-btn" id="confirm-hold-btn">Confirm</button>
+                <button class="close-x">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="overlay center" id="add-new-supplier-modal">
+    <div class="modal add-new-supplier">
+        <div class="header">
+            <h2>Add New Supplier</h2>
+            <span class="close-x" id="new-supplier-close-x">&#215;</span>
+        </div>
+        <div class="body">
+            <p>Would you like to add a new supplier to your list of suppliers? Just give us their email and we'll handle the rest.</p>
+            <div class="data-point">
+                <label>Email:</label>
+                <input type="email" id="new-supplier-email">
+            </div>
+            <div class="buttons">
+                <button class="confirm-hold-btn" id="confirm-add-supplier-btn">Add Supplier</button>
+                <button class="close-x">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="main-content">
+    <div class="cases-section">
+        <div class="section-header">
+            <div class="search-div">
+                <input type="text" class="search-input" id="search-input">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </div>
+            <div class="date-section">
+                <div class="date-range">
+                    <b>DATE:</b>
+                    <input type="text" id="datepickerStart" class="datepickerInput">
+                    <b>/</b>
+                    <input type="text" id="datepickerEnd" class="datepickerInput">
+                    <i class="fa fa-calendar-alt" id="datepicker" aria-hidden="true"></i>
+                </div>
+                <div class="icons">
+                    <i class="fa fa-download" aria-hidden="true"></i>
+                    <i class="fa fa-upload" aria-hidden="true"></i>
+                    <i class="fa fa-sync" aria-hidden="true"></i>
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+        <div class="section-body">
+            <div class="cards" id="patient-cards"></div>
+            <div class="section-footer body-footer">
+                <div class="drop-zone">
+                    <span class="drop-zone__prompt">Drop zip file or image here or click to upload</span>
+                    <form method="POST" enctype="multipart/form-data">
+                        <input type="file" class="drop-zone__input" id="zip-upload-input" multiple>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="case-info-section">
+        <div class="section-header">
+            <ul class="btn-section">
+                <li class="btn current" id="case-info-btn">Case Info</li>
+                <li class="btn" id="case-history-btn">Case History</li>
+            </ul>
+            <h3 class="date-section hold-border-identifier" id="current-case-name"></h3>
+        </div>
+        <div class="section-body pictures">
+            <div class="displayed-image" id="display-image-box"></div>
+            <div class="body-footer">
+                <div class="carousel">
+                    <i class="fa fa-chevron-left chevron" aria-hidden="true"></i>
+                    <div class="other-images" id="other-images"></div>
+                    <i class="fa fa-chevron-right chevron" aria-hidden="true"></i>
+                </div>
+                <div class="camera-box">
+                    <div class="camera">
+                        <i class="fa fa-camera" aria-hidden="true"></i>
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="case-notes-section">
+        <div class="section-header">
+            <div class="buttons-section"></div>
+            <div class="hold-info hold-border-identifier">
+                <button class="btn btn-hold" id="hold-btn">HOLD</button>
+                <div class="case-details">
+                    <b>Case Submitted: <span class="info" id="current-case-date"></span></b>
+                    <b>Designer: <span class="info" id="current-case-designer">@Model.Company.CompanyName</span></b>
+                </div>
+            </div>
+        </div>
+        <div class="section-body">
+            <div class="notes" id="notes"></div>
+            <div class="body-footer new-note">
+                <div class="note-div">
+                    <h4>@Model.FirstName @Model.LastName</h4>
+                    <div class="note-area">
+                        @if(Model.Company.CompanyTypeID == 1)
+                        {
+                            <i class="fa fa-user-md" aria-hidden="true"></i>
+                        }
+                        else
+                        {
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        }
+                        <textarea id="new-note"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    var user = @Html.Raw(Json.Serialize(Model));
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="~/lib/jquery/dist/jquery.min.js" asp-append-version="true"></script>
+<script src="~/lib/jquery/dist/jquery-ui-1.12.1.custom/jquery-ui.min.js" asp-append-version="true"></script>
+<script>
+    $("#datepickerStart").datepicker()
+    $("#datepickerEnd").datepicker()
+</script>
+<script src="~/js/zipFileUpload.js" asp-append-version="true"></script>

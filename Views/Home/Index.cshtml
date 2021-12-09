@@ -1,0 +1,53 @@
+﻿@{
+    ViewData["Title"] = "DocShare Login";
+}
+
+@model User
+
+<section class="login-page-a">
+    <div class="outer-box center">
+        <div class="mid-box center">
+            <div class="login-box">
+                <h1 class="login-title">Login</h1>
+                <span class="error-message">@ViewBag.LoginError</span>
+                <form asp-controller="Home" asp-action="SubmitLogin" method="post" class="center">
+                    <input type="email" asp-for="@Model.Email" class="username input-item" placeholder="Email">
+                    <input type="password" asp-for="@Model.Password" class="password input-item" placeholder="Password">
+                    <input type="submit" class="btn btn-primary">    
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer id="main-footer">
+    <div class="footer-content container">
+        <div class="right-reserved">
+            Powered by
+            <a href="http://luminoussoft.com/" target="_blank">
+                <div class="logo-footer" id="logo-footer">
+                    <div class="logo-l logo-footer-letter">L</div>
+                    <div class="logo-u logo-footer-letter">u</div>
+                    <div class="logo-m logo-footer-letter">m</div>
+                    <div class="logo-i logo-footer-letter">i</div>
+                    <div class="logo-n logo-footer-letter">n</div>
+                    <div class="logo-o logo-footer-letter">o</div>
+                    <div class="logo-u logo-footer-letter">u</div>
+                    <div class="logo-s logo-footer-letter">s</div>
+                    <div class="logo-footer-letter logo-bolt"><i class="fas fa-bolt"></i></div>
+                    <div class="logo-S logo-footer-letter">S</div>
+                    <div class="logo-oo logo-footer-letter">o</div>
+                    <div class="logo-f logo-footer-letter">f</div>
+                    <div class="logo-t logo-footer-letter">t</div>
+                </div>
+            </a>
+            <p>, Inc.</p>
+        </div>
+        <div class="social">
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-youtube"></i>
+        </div>
+    </div>
+</footer>

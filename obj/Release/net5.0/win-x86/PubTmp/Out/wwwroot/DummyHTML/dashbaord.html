@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href=https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/classic.min.css crossorigin="anonymous"/>
+    <link rel="stylesheet" href="../css/site.css">
+    <title>DocShare Dashboard</title>
+</head>
+<body>
+    <header class="dashboard-header">
+        <div class="h1-div">
+            <h1>Contact</h1>
+        </div>
+        <div class="lab-options-div">
+            <select id="lab-options" class="lab-options">
+                <option value="">Lab A</option>
+                <option value="">Lab B</option>
+                <option value="">Lab C</option>
+                <option value="">Lab X</option>
+                <option value="">Lab Y</option>
+                <option value="">Lab Z</option>
+            </select>
+        </div>
+        <div class="selected-lab">
+            <h2 id="lab-name">LAB X<i class="fa fa-user-circle" aria-hidden="true"></i></h2>
+        </div>
+    </header>
+    <div class="overlay center" id="new-case-modal">
+        <div class="case-creator modal">
+            <div class="header">
+                <h2>New Case</h2>
+                <span class="close-x">&#215;</span>
+            </div>
+            <div class="data-point">
+                <label for="">Case Name:</label>
+                <input type="text" id="case-creator-case-name" placeholder="Case Name">
+                <input type="hidden" id="case-creator-case-id" >
+            </div>
+            <button class="" id="submit-new-case">Save New Case</button>
+        </div>
+    </div>
+    <section class="main-content">
+        <div class="cases-section">
+            <div class="section-header">
+                <ul class="btn-section">
+                    <li class="btn">Upload</li>
+                    <li class="btn current">History</li>
+                </ul>
+                <div class="date-section">
+                    <div class="date-range">
+                        <b>DATE:</b>
+                        <b>8-14-2021</b>
+                        <b>/</b>
+                        <b>8-14-2021</b>
+                        <i class="fa fa-calendar-alt" aria-hidden="true"></i>
+                    </div>
+                    <div class="icons">
+                        <i class="fa fa-download" aria-hidden="true"></i>
+                        <i class="fa fa-upload" aria-hidden="true"></i>
+                        <i class="fa fa-sync" aria-hidden="true"></i>
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="section-body cards">
+                <div class="card">
+                    <div class="left-side">
+                        <div class="circle circle-green"></div>
+                        <i class="fa fa-address-card" aria-hidden="true"></i>
+                        <b>Celine G. Dion</b>
+                    </div>
+                    <div class="icons">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <i class="fa fa-download" aria-hidden="true"></i>
+                        <i class="fa fa-upload" aria-hidden="true"></i>
+                        <i class="fa fa-sync" aria-hidden="true"></i>
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="card current">
+                    <div class="left-side">
+                        <div class="circle circle-green"></div>
+                        <i class="fa fa-address-card" aria-hidden="true"></i>
+                        <b>Celine G. Dion</b>
+                    </div>
+                    <div class="icons">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <i class="fa fa-download" aria-hidden="true"></i>
+                        <i class="fa fa-upload" aria-hidden="true"></i>
+                        <i class="fa fa-sync" aria-hidden="true"></i>
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="left-side">
+                        <div class="circle circle-yellow"></div>
+                        <i class="fa fa-address-card" aria-hidden="true"></i>
+                        <b>Celine G. Dion</b>
+                    </div>
+                    <div class="icons">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <i class="fa fa-download" aria-hidden="true"></i>
+                        <i class="fa fa-upload" aria-hidden="true"></i>
+                        <i class="fa fa-sync" aria-hidden="true"></i>
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="left-side">
+                        <div class="circle circle-blue"></div>
+                        <i class="fa fa-address-card" aria-hidden="true"></i>
+                        <b>Celine G. Dion</b>
+                    </div>
+                    <div class="icons">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <i class="fa fa-download" aria-hidden="true"></i>
+                        <i class="fa fa-upload" aria-hidden="true"></i>
+                        <i class="fa fa-sync" aria-hidden="true"></i>
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="left-side">
+                        <div class="circle circle-green"></div>
+                        <i class="fa fa-address-card" aria-hidden="true"></i>
+                        <b>Celine G. Dion</b>
+                    </div>
+                    <div class="icons">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <i class="fa fa-download" aria-hidden="true"></i>
+                        <i class="fa fa-upload" aria-hidden="true"></i>
+                        <i class="fa fa-sync" aria-hidden="true"></i>
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="left-side">
+                        <div class="circle circle-green"></div>
+                        <i class="fa fa-address-card" aria-hidden="true"></i>
+                        <b>Celine G. Dion</b>
+                    </div>
+                    <div class="icons">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <i class="fa fa-download" aria-hidden="true"></i>
+                        <i class="fa fa-upload" aria-hidden="true"></i>
+                        <i class="fa fa-sync" aria-hidden="true"></i>
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="left-side">
+                        <div class="circle circle-green"></div>
+                        <i class="fa fa-address-card" aria-hidden="true"></i>
+                        <b>Celine G. Dion</b>
+                    </div>
+                    <div class="icons">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <i class="fa fa-download" aria-hidden="true"></i>
+                        <i class="fa fa-upload" aria-hidden="true"></i>
+                        <i class="fa fa-sync" aria-hidden="true"></i>
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="section-footer">
+                <div class="drop-zone">
+                    <span class="drop-zone__prompt">Drop zip file here or click to upload</span>
+                    <input type="file" class="drop-zone__input">
+                </div>
+            </div>
+        </div>
+        <div class="case-info-section">
+            <div class="section-header">
+                <ul class="btn-section">
+                    <li class="btn current">Case Info</li>
+                    <li class="btn">Case History</li>
+                </ul>
+                <h3 class="date-section">
+                    Celine G. Dion
+                </h3>
+            </div>
+            <div class="section-body pictures">
+                <div class="displayed-image">
+                    <img src="../images/sample-image.PNG" alt="">
+                </div>
+                <div class="body-footer">
+                    <i class="fa fa-chevron-left chevron" aria-hidden="true"></i>
+                    <div class="other-images">
+                        <img src="../images/sample-image.PNG" alt="">
+                        <img src="../images/sample-image.PNG" alt="">
+                        <img src="../images/sample-image.PNG" alt="">
+                        <img src="../images/sample-image.PNG" alt="">
+                        <img src="../images/sample-image.PNG" alt="">
+                        <img src="../images/sample-image.PNG" alt="">
+                        <img src="../images/sample-image.PNG" alt="">
+                        <img src="../images/sample-image.PNG" alt="">
+                        <img src="../images/sample-image.PNG" alt="">
+                        <img src="../images/sample-image.PNG" alt="">
+                        <img src="../images/sample-image.PNG" alt="">
+                        <img src="../images/sample-image.PNG" alt="">
+                        <img src="../images/sample-image.PNG" alt="">
+                    </div>
+                    <i class="fa fa-chevron-right chevron" aria-hidden="true"></i>
+                    <div class="camera">
+                        <i class="fa fa-camera" aria-hidden="true"></i>
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="case-notes-section">
+            <div class="section-header">
+                <div class="search-div">
+                    <input type="text" class="search-input">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </div>
+                <div class="hold-info">
+                    <button class="btn btn-hold">HOLD</button>
+                    <div class="case-details">
+                        <b>Case Submitted: <span class="info">2021-08-14</span></b>
+                        <b>Designer: <span class="info">Lab X</span></b>
+                    </div>
+                </div>
+            </div>
+            <div class="section-body">
+                <div class="notes">
+                    <h2>Notes</h2>
+                    <div class="note-card doc">
+                        <div class="doc-note">
+                            <h4>Dr. Toothy</h4>
+                            <div class="note-body">
+                                <i class="fa fa-user-md" aria-hidden="true"></i>
+                                <p class="note">
+                                    Great design, I love your work! I send you big tip!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="note-card designer">
+                        <div class="designer-note">
+                            <h4>Lab X</h4>
+                            <div class="note-body">
+                                <p class="note">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam eveniet maxime maiores nemo repudiandae sequi enim alias molestiae nulla magnam!
+                                </p>
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="note-card doc">
+                        <div class="doc-note">
+                            <h4>Dr. Toothy</h4>
+                            <div class="note-body">
+                                <i class="fa fa-user-md" aria-hidden="true"></i>
+                                <p class="note">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis debitis est eveniet aliquam sint quo placeat? Accusamus porro reprehenderit, totam autem laboriosam quia incidunt ratione iusto, a atque nemo libero.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="note-card designer">
+                        <div class="designer-note">
+                            <h4>Lab X</h4>
+                            <div class="note-body">
+                                <p class="note">
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium adipisci repellat praesentium, blanditiis ipsam esse quia aliquid necessitatibus fuga. Quasi maiores molestias quidem sit quis! Porro quod eligendi aut odit? Suscipit, dolore vitae. Nostrum ratione magnam a, nihil enim porro nemo consequuntur voluptatibus explicabo rem, atque facilis fuga, dolore eaque.
+                                </p>
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="note-card doc">
+                        <div class="doc-note">
+                            <h4>Dr. Toothy</h4>
+                            <div class="note-body">
+                                <i class="fa fa-user-md" aria-hidden="true"></i>
+                                <p class="note">
+                                    Great design, I love your work! I send you big tip!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="note-card designer">
+                        <div class="designer-note">
+                            <h4>Lab X</h4>
+                            <div class="note-body">
+                                <p class="note">
+                                    Thank you very much! It was a pleasure working with you.
+                                </p>
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="note-card doc">
+                        <div class="doc-note">
+                            <h4>Dr. Toothy</h4>
+                            <div class="note-body">
+                                <i class="fa fa-user-md" aria-hidden="true"></i>
+                                <p class="note">
+                                    Great design, I love your work! I send you big tip!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="note-card designer">
+                        <div class="designer-note">
+                            <h4>Lab X</h4>
+                            <div class="note-body">
+                                <p class="note">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit temporibus amet alias totam aspernatur ipsam, impedit ab sit quibusdam! Illo amet ipsa pariatur ea velit, dolores voluptatem minus ullam commodi eligendi debitis molestias quisquam sed, quaerat esse deserunt quo ad?
+                                </p>
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="body-footer new-note">
+                    <div class="note-div">
+                        <h4>Dr. Toothy</h4>
+                        <div class="note-area">
+                            <i class="fa fa-user-md" aria-hidden="true"></i>
+                            <textarea id="new-note"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="../js/site.js"></script>
+    <script src="../js/zipFileUpload.js"></script>
+</body>
+</html>

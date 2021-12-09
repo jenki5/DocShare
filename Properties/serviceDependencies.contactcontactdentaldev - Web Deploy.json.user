@@ -1,0 +1,35 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "restored": true,
+      "restoreTime": "2021-10-21T06:26:15.5187189Z"
+    }
+  },
+  "parameters": {
+    "contactcontactdentaldev.resourceName": {
+      "Name": "contactcontactdentaldev.resourceName",
+      "Type": null,
+      "Value": "contactcontactdentaldev"
+    },
+    "contactcontactdentaldev.resourceGroupName": {
+      "Name": "contactcontactdentaldev.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "contact_dev"
+    },
+    "contactcontactdentaldev.subscriptionId": {
+      "Name": "contactcontactdentaldev.subscriptionId",
+      "Type": "subscription",
+      "Value": "0577843d-593d-4b8a-a04f-dbcf8775347a"
+    },
+    "subscriptionId": {
+      "Name": "subscriptionId",
+      "Type": "subscription",
+      "Value": "0577843d-593d-4b8a-a04f-dbcf8775347a"
+    },
+    "contactcontactdentaldev.resourceGroupLocation": {
+      "Name": "contactcontactdentaldev.resourceGroupLocation",
+      "Type": null,
+      "Value": "eastus"
+    }
+  }
+}

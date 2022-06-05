@@ -7,7 +7,6 @@ C:\Users\tjenk\OneDrive\Documents\CSProjects\DocShare\bin\Debug\net5.0\DocShare.
 C:\Users\tjenk\OneDrive\Documents\CSProjects\DocShare\bin\Debug\net5.0\DocShare.runtimeconfig.json
 C:\Users\tjenk\OneDrive\Documents\CSProjects\DocShare\bin\Debug\net5.0\DocShare.runtimeconfig.dev.json
 C:\Users\tjenk\OneDrive\Documents\CSProjects\DocShare\bin\Debug\net5.0\DocShare.dll
-C:\Users\tjenk\OneDrive\Documents\CSProjects\DocShare\bin\Debug\net5.0\ref\DocShare.dll
 C:\Users\tjenk\OneDrive\Documents\CSProjects\DocShare\bin\Debug\net5.0\DocShare.pdb
 C:\Users\tjenk\OneDrive\Documents\CSProjects\DocShare\bin\Debug\net5.0\DocShare.Views.dll
 C:\Users\tjenk\OneDrive\Documents\CSProjects\DocShare\bin\Debug\net5.0\DocShare.Views.pdb
@@ -43,7 +42,6 @@ C:\Users\tjenk\OneDrive\Documents\CSProjects\DocShare\bin\Debug\net5.0\runtimes\
 C:\Users\tjenk\OneDrive\Documents\CSProjects\DocShare\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 C:\Users\tjenk\OneDrive\Documents\CSProjects\DocShare\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\tjenk\OneDrive\Documents\CSProjects\DocShare\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\tjenk\OneDrive\Documents\CSProjects\DocShare\obj\Debug\net5.0\DocShare.csprojAssemblyReference.cache
 C:\Users\tjenk\OneDrive\Documents\CSProjects\DocShare\obj\Debug\net5.0\DocShare.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\tjenk\OneDrive\Documents\CSProjects\DocShare\obj\Debug\net5.0\DocShare.AssemblyInfoInputs.cache
 C:\Users\tjenk\OneDrive\Documents\CSProjects\DocShare\obj\Debug\net5.0\DocShare.AssemblyInfo.cs
@@ -52,7 +50,6 @@ C:\Users\tjenk\OneDrive\Documents\CSProjects\DocShare\obj\Debug\net5.0\DocShare.
 C:\Users\tjenk\OneDrive\Documents\CSProjects\DocShare\obj\Debug\net5.0\DocShare.RazorAssemblyInfo.cache
 C:\Users\tjenk\OneDrive\Documents\CSProjects\DocShare\obj\Debug\net5.0\DocShare.RazorAssemblyInfo.cs
 C:\Users\tjenk\OneDrive\Documents\CSProjects\DocShare\obj\Debug\net5.0\staticwebassets\DocShare.StaticWebAssets.Manifest.cache
-C:\Users\tjenk\OneDrive\Documents\CSProjects\DocShare\obj\Debug\net5.0\staticwebassets\DocShare.StaticWebAssets.xml
 C:\Users\tjenk\OneDrive\Documents\CSProjects\DocShare\obj\Debug\net5.0\scopedcss\bundle\DocShare.styles.css
 C:\Users\tjenk\OneDrive\Documents\CSProjects\DocShare\obj\Debug\net5.0\DocShare.TagHelpers.input.cache
 C:\Users\tjenk\OneDrive\Documents\CSProjects\DocShare\obj\Debug\net5.0\DocShare.TagHelpers.output.cache
@@ -96,3 +93,14 @@ C:\Users\tjenk\OneDrive\Documents\CSProjects\DocShare\bin\Debug\net5.0\publish\p
 C:\Users\tjenk\OneDrive\Documents\CSProjects\DocShare\bin\Debug\net5.0\publish\publish\publish\package-lock.json
 C:\Users\tjenk\OneDrive\Documents\CSProjects\DocShare\bin\Debug\net5.0\publish\publish\publish\package.json
 C:\Users\tjenk\OneDrive\Documents\CSProjects\DocShare\bin\Debug\net5.0\publish\publish\publish\wwwroot\lib\jquery\dist\jquery-ui-1.12.1.custom\package.json
+C:\Users\tjenk\OneDrive\Documents\CSProjects\DocShare\bin\Debug\net5.0\publish\publish\publish\publish\web.config
+C:\Users\tjenk\OneDrive\Documents\CSProjects\DocShare\bin\Debug\net5.0\publish\publish\publish\publish\appsettings.Development.json
+C:\Users\tjenk\OneDrive\Documents\CSProjects\DocShare\bin\Debug\net5.0\publish\publish\publish\publish\appsettings.json
+C:\Users\tjenk\OneDrive\Documents\CSProjects\DocShare\bin\Debug\net5.0\publish\publish\publish\publish\DocShare.deps.json
+C:\Users\tjenk\OneDrive\Documents\CSProjects\DocShare\bin\Debug\net5.0\publish\publish\publish\publish\DocShare.runtimeconfig.json
+C:\Users\tjenk\OneDrive\Documents\CSProjects\DocShare\bin\Debug\net5.0\publish\publish\publish\publish\package-lock.json
+C:\Users\tjenk\OneDrive\Documents\CSProjects\DocShare\bin\Debug\net5.0\publish\publish\publish\publish\package.json
+C:\Users\tjenk\OneDrive\Documents\CSProjects\DocShare\bin\Debug\net5.0\publish\publish\publish\publish\wwwroot\lib\jquery\dist\jquery-ui-1.12.1.custom\package.json
+C:\Users\tjenk\OneDrive\Documents\CSProjects\DocShare\bin\Debug\net5.0\DocShare.StaticWebAssets.xml
+C:\Users\tjenk\OneDrive\Documents\CSProjects\DocShare\obj\Debug\net5.0\DocShare.csproj.AssemblyReference.cache
+C:\Users\tjenk\OneDrive\Documents\CSProjects\DocShare\obj\Debug\net5.0\refint\DocShare.dll

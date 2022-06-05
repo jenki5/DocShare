@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "vzqkXWJFvl8RyVh6le8FSqbeNElsFAcq7kJqPSe0OE2ABfVy29+m4/2wE6GfYp3awvmplbgHO9t6ntESKKiAMg==",
+  "dgSpecHash": "TaNtAlKrjYgQhCcS/lNfbCE1rxInWER4D8vCzW5IHIG+FRBTRKrX4IPUHSv2EJLxG67FCoO0gP0I33uRMlaPNw==",
   "success": true,
   "projectFilePath": "C:\\Users\\tjenk\\OneDrive\\Documents\\CSProjects\\DocShare\\DocShare.csproj",
   "expectedPackageFiles": [
@@ -100,7 +100,8 @@
     "C:\\Users\\tjenk\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\tjenk\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\tjenk\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\tjenk\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    "C:\\Users\\tjenk\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
+    "C:\\Users\\tjenk\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.15\\microsoft.netcore.app.host.win-x64.5.0.15.nupkg.sha512"
   ],
   "logs": []
 }
